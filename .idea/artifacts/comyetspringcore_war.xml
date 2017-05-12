@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="comyetspringcore:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="universitydatabase.war">
+      <element id="artifact" artifact-name="comyetspringcore:war exploded" />
+    </root>
+  </artifact>
+</component>
