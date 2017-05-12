@@ -6,15 +6,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "pair")
+@NamedQuery(name = "Pair.getAll", query = "SELECT p FROM Pair p")
 public class Pair {
 
     @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name= "increment", strategy= "increment")
-    @Column(name = "id", length = 6, nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long pairId;
 
-    @Column(name = "pair_name")
+    @Column(name = "pair_name", length = 45)
     private String pairName;
 
     @Column(name = "course")
@@ -26,7 +25,7 @@ public class Pair {
     @Column(name = "weekday")
     private Weekdays weekday;
 
-    @Column(name = "teacher_name")
+    @Column(name = "teacher_name", length = 45)
     private String teacherName;
 
     public Pair() {
